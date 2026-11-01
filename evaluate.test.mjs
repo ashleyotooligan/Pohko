@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {evaluate,getCase,history,reviewQueue} from './evaluate.mjs';
+const j=JSON.parse(await readFile(new URL('reference-journal.json',import.meta.url),'utf8')),clock='2026-11-01T12:00:00.000Z';
+test('a critical failure breaks the declared thesis',()=>{const c=getCase(j,'lilt',clock);assert.equal(c.status,'broken');assert.equal(c.supportedWeight,4);assert.equal(c.totalWeight,7);assert.equal(c.marketIndex,113);});
+test('the review cutoff never admits future events',()=>{const c=getCase(j,'lilt','2026-11-01T10:00:00.000Z');assert.equal(c.status,'intact');assert.ok(c.events.every(e=>e.at<=c.asOf));assert.equal(c.marketIndex,109);});
+test('freshness is inclusive at the age budget and expires after it',()=>{assert.equal(getCase(j,'crumb','2026-11-01T10:00:00.000Z').status,'intact');assert.equal(getCase(j,'crumb','2026-11-01T10:00:00.001Z').claims[0].state,'stale');});
+test('opposing fresh sources remain contested',()=>{const c=getCase(j,'vela',clock);assert.equal(c.status,'review');assert.equal(c.claims[0].state,'contested');assert.equal(c.claims[0].fresh.length,2);});
+test('a revision preserves the original and requires post-revision observations',()=>{const c=getCase(j,'daze',clock);assert.equal(c.version,2);assert.notEqual(c.original.reason,c.thesis.reason);assert.equal(c.supportedWeight,3);assert.equal(c.claims[1].state,'unobserved');assert.equal(c.status,'review');});
+test('a closed file remains closed even when evidence ages',()=>{assert.equal(getCase(j,'spindle',clock).status,'closed');});
+test('the queue puts broken and unresolved files before intact files',()=>{const cases=reviewQueue(evaluate(j,clock));assert.equal(cases[0].id,'lilt');assert.equal(cases.at(-1).id,'spindle');});
+test('history ends at the selected information cutoff',()=>{const points=history(j,'lilt','2026-11-01T10:00:00.000Z');assert.equal(points.at(-1).marketIndex,109);assert.equal(points.length,3);});
+test('evaluation does not mutate the journal',()=>{const bytes=JSON.stringify(j);evaluate(j,clock);assert.equal(JSON.stringify(j),bytes);});
+test('all declared thesis states occur in the reference journal',()=>{assert.deepEqual([...new Set(evaluate(j,clock).map(c=>c.status))].sort(),['broken','closed','intact','review']);});

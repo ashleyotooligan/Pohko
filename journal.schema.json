@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:pohko:journal:1",
+  "title":"Pohko journal envelope",
+  "type":"object",
+  "required":["schema","name","origin","entries"],
+  "properties":{
+    "schema":{"const":"pohko/journal/1"},
+    "name":{"type":"string","minLength":1,"maxLength":160},
+    "origin":{"enum":["example","user","mixed"]},
+    "entries":{"type":"array","maxItems":10000,"items":{"type":"object","required":["seq","id","thesisId","kind","at","body","prev","digest"],"properties":{"seq":{"type":"integer","minimum":1},"id":{"type":"string","pattern":"^e[0-9]{5,}$"},"thesisId":{"type":"string","minLength":1,"maxLength":80},"kind":{"enum":["open","evidence","amend","review","close","market"]},"at":{"type":"string","format":"date-time"},"body":{"type":"object"},"prev":{"type":"string","pattern":"^[a-f0-9]{64}$"},"digest":{"type":"string","pattern":"^[a-f0-9]{64}$"}}}}
+  },
+  "$comment":"Runtime validation additionally checks event bodies, timestamps, chronological sequence, source semantics and linked digests."
+}

@@ -1,0 +1,12 @@
+import {createRequire} from 'node:module';
+import {readFile,writeFile} from 'node:fs/promises';
+import {caseState,VIEWS,render} from './views.mjs';
+import {verifyJournal} from './journal.mjs';
+import {makeReceipt} from './packet.mjs';
+import {C,box,text,line,imageFit,label} from './paint.mjs';
+const require=createRequire(import.meta.url),{createCanvas,loadImage,GlobalFonts}=require(process.env.POHKO_CANVAS_MODULE??'@napi-rs/canvas'),fonts=process.env.POHKO_FONT_DIR??'/usr/share/fonts/truetype/dejavu';
+for(const [file,name] of [['DejaVuSans.ttf','DejaVu Sans'],['DejaVuSans-Bold.ttf','DejaVu Sans'],['DejaVuSansMono.ttf','DejaVu Sans Mono'],['DejaVuSansMono-Bold.ttf','DejaVu Sans Mono'],['DejaVuSerif.ttf','DejaVu Serif'],['DejaVuSerif-Bold.ttf','DejaVu Serif']])GlobalFonts.registerFromPath(fonts+'/'+file,name);
+const root=new URL('./',import.meta.url),journal=JSON.parse(await readFile(new URL('reference-journal.json',root),'utf8')),asOf=journal.entries.at(-1).at,art=await loadImage(new URL('pohko.png',root).pathname),integrity=await verifyJournal(journal),canvas=createCanvas(1600,1100),ctx=canvas.getContext('2d');
+let viewName='';const checked=new Proxy(ctx,{get(o,k){if(k==='fillText')return (value,x,y)=>{if(x<0||y<0||x+o.measureText(String(value)).width>1601||y+parseFloat(o.font)>1099)throw new Error('Text outside '+viewName+': '+value+' at '+x+','+y);return o.fillText(value,x,y);};const value=Reflect.get(o,k,o);return typeof value==='function'?value.bind(o):value;},set:(o,k,v)=>Reflect.set(o,k,v,o)});
+for(const [i,v] of VIEWS.entries()){viewName=v.id;const state={...caseState(journal,v.preset,asOf),view:v.id,integrity,receipt:await makeReceipt(journal,v.preset,asOf)};render(checked,state,art);await writeFile(new URL(String(i+1).padStart(2,'0')+'-'+v.id+'.png',root),canvas.toBuffer('image/png'));}
+const cover=createCanvas(1600,800),c=cover.getContext('2d');box(c,0,0,1600,800,C.paper);label(c,'POHKO / A MEMORY FOR POSITIONS ON SOLANA',73,66,C.purple);text(c,'Keep',69,170,124,C.ink,'serif');text(c,'the reason.',69,312,124,C.ink,'serif');line(c,74,512,853,512,C.ink,2);text(c,'Original reasons. Current evidence.',76,558,29,C.purple,'serif');text(c,'A journal that remembers what must remain true.',76,614,22,C.muted);label(c,'THESIS FILES / EVIDENCE / GROK BOT WORKFLOW',76,718);imageFit(c,art,918,119,623,623);await writeFile(new URL('pohko-cover.png',root),cover.toBuffer('image/png'));console.log('Rendered twelve 1600 x 1100 views and a 1600 x 800 cover.');

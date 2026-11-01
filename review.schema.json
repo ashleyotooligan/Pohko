@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:pohko:review:1","title":"Pohko review packet","type":"object",
+  "required":["schema","origin","asOf","thesisId","original","current","versionNumber","status","conditions","sourceEvents","journalHead","caseHead","operator","execution"],
+  "properties":{"schema":{"const":"pohko/review/1"},"origin":{"enum":["example","user","mixed"]},"asOf":{"type":"string","format":"date-time"},"thesisId":{"type":"string"},"original":{"type":"object"},"current":{"type":"object"},"versionNumber":{"type":"integer","minimum":1},"status":{"enum":["intact","broken","review","closed"]},"conditions":{"type":"array","minItems":1,"maxItems":3},"sourceEvents":{"type":"array"},"journalHead":{"type":"string","pattern":"^[a-f0-9]{64}$"},"caseHead":{"type":["string","null"]},"operator":{"type":"object"},"execution":{"type":"object"}}
+}

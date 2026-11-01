@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:pohko:receipt:1","title":"Pohko review receipt","type":"object",
+  "required":["schema","algorithm","encoding","digest","attestation","packet"],
+  "properties":{"schema":{"const":"pohko/receipt/1"},"algorithm":{"const":"SHA-256"},"encoding":{"const":"sorted-key JSON / UTF-8 / no trailing newline"},"digest":{"type":"string","pattern":"^[a-f0-9]{64}$"},"attestation":{"type":"string"},"packet":{"type":"object"}}
+}

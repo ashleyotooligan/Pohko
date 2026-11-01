@@ -1,0 +1,551 @@
+{
+  "schema": "pohko/receipt/1",
+  "encoding": "sorted-key JSON / UTF-8 / no trailing newline",
+  "algorithm": "SHA-256",
+  "digest": "9dcff618ae42b120ba42617a00c365f3d1f330f1d39e50ccc0c744c8a0f8e8ef",
+  "attestation": "Local consistency record; unsigned; not a chain anchor",
+  "packet": {
+    "schema": "pohko/review/1",
+    "version": "0.1.0",
+    "origin": "example",
+    "asOf": "2026-11-01T12:00:00.000Z",
+    "thesisId": "lilt",
+    "original": {
+      "symbol": "LILT",
+      "title": "Attention needs a floor",
+      "reason": "The community is reaching more accounts while enough SOL remains in the quoted pool. I want depth and distribution to hold as attention grows.",
+      "sizeSOL": 6,
+      "claims": [
+        {
+          "id": "depth",
+          "label": "Depth survives the attention cycle",
+          "metric": "quoteReserveSOL",
+          "op": ">=",
+          "threshold": 140,
+          "unit": "SOL",
+          "weight": 3,
+          "critical": true,
+          "maxAgeHours": 2
+        },
+        {
+          "id": "participation",
+          "label": "Participation continues to broaden",
+          "metric": "activeAccountCount",
+          "op": ">=",
+          "threshold": 600,
+          "unit": "accounts",
+          "weight": 2,
+          "critical": false,
+          "maxAgeHours": 2
+        },
+        {
+          "id": "concentration",
+          "label": "The supplied cohort stays distributed",
+          "metric": "topTenCohortShare",
+          "op": "<=",
+          "threshold": 0.46,
+          "unit": "fraction",
+          "weight": 2,
+          "critical": true,
+          "maxAgeHours": 2
+        }
+      ]
+    },
+    "current": {
+      "symbol": "LILT",
+      "title": "Attention needs a floor",
+      "reason": "The community is reaching more accounts while enough SOL remains in the quoted pool. I want depth and distribution to hold as attention grows.",
+      "sizeSOL": 6,
+      "claims": [
+        {
+          "id": "depth",
+          "label": "Depth survives the attention cycle",
+          "metric": "quoteReserveSOL",
+          "op": ">=",
+          "threshold": 140,
+          "unit": "SOL",
+          "weight": 3,
+          "critical": true,
+          "maxAgeHours": 2
+        },
+        {
+          "id": "participation",
+          "label": "Participation continues to broaden",
+          "metric": "activeAccountCount",
+          "op": ">=",
+          "threshold": 600,
+          "unit": "accounts",
+          "weight": 2,
+          "critical": false,
+          "maxAgeHours": 2
+        },
+        {
+          "id": "concentration",
+          "label": "The supplied cohort stays distributed",
+          "metric": "topTenCohortShare",
+          "op": "<=",
+          "threshold": 0.46,
+          "unit": "fraction",
+          "weight": 2,
+          "critical": true,
+          "maxAgeHours": 2
+        }
+      ]
+    },
+    "versionNumber": 1,
+    "status": "broken",
+    "conditions": [
+      {
+        "id": "depth",
+        "label": "Depth survives the attention cycle",
+        "metric": "quoteReserveSOL",
+        "op": ">=",
+        "threshold": 140,
+        "unit": "SOL",
+        "weight": 3,
+        "critical": true,
+        "state": "broken",
+        "ageHours": 0,
+        "sourceEventIds": [
+          "e00066"
+        ],
+        "freshEventIds": [
+          "e00066"
+        ]
+      },
+      {
+        "id": "participation",
+        "label": "Participation continues to broaden",
+        "metric": "activeAccountCount",
+        "op": ">=",
+        "threshold": 600,
+        "unit": "accounts",
+        "weight": 2,
+        "critical": false,
+        "state": "supported",
+        "ageHours": 0,
+        "sourceEventIds": [
+          "e00067"
+        ],
+        "freshEventIds": [
+          "e00067"
+        ]
+      },
+      {
+        "id": "concentration",
+        "label": "The supplied cohort stays distributed",
+        "metric": "topTenCohortShare",
+        "op": "<=",
+        "threshold": 0.46,
+        "unit": "fraction",
+        "weight": 2,
+        "critical": true,
+        "state": "supported",
+        "ageHours": 0,
+        "sourceEventIds": [
+          "e00068"
+        ],
+        "freshEventIds": [
+          "e00068"
+        ]
+      }
+    ],
+    "sourceEvents": [
+      {
+        "seq": 1,
+        "id": "e00001",
+        "kind": "open",
+        "thesisId": "lilt",
+        "at": "2026-11-01T08:00:00.000Z",
+        "body": {
+          "symbol": "LILT",
+          "title": "Attention needs a floor",
+          "reason": "The community is reaching more accounts while enough SOL remains in the quoted pool. I want depth and distribution to hold as attention grows.",
+          "sizeSOL": 6,
+          "claims": [
+            {
+              "id": "depth",
+              "label": "Depth survives the attention cycle",
+              "metric": "quoteReserveSOL",
+              "op": ">=",
+              "threshold": 140,
+              "unit": "SOL",
+              "weight": 3,
+              "critical": true,
+              "maxAgeHours": 2
+            },
+            {
+              "id": "participation",
+              "label": "Participation continues to broaden",
+              "metric": "activeAccountCount",
+              "op": ">=",
+              "threshold": 600,
+              "unit": "accounts",
+              "weight": 2,
+              "critical": false,
+              "maxAgeHours": 2
+            },
+            {
+              "id": "concentration",
+              "label": "The supplied cohort stays distributed",
+              "metric": "topTenCohortShare",
+              "op": "<=",
+              "threshold": 0.46,
+              "unit": "fraction",
+              "weight": 2,
+              "critical": true,
+              "maxAgeHours": 2
+            }
+          ]
+        },
+        "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+        "digest": "3556462a39b59b33aecc9cd252c884c0898285b42a6b624b16c156289f450110"
+      },
+      {
+        "seq": 7,
+        "id": "e00007",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T08:00:00.000Z",
+        "body": {
+          "claimId": "depth",
+          "value": 184,
+          "sourceId": "reference:lilt:depth:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T08:00:00.000Z",
+          "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "e44009baf247492efb5e70c6055c1ace58ee6c1ad525bb548eb1e149d9fe9726",
+        "digest": "184c63720e8757a92ed25f3b37d8a19b954bb7239b69670b10ea313f62212dcc"
+      },
+      {
+        "seq": 8,
+        "id": "e00008",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T08:00:00.000Z",
+        "body": {
+          "claimId": "participation",
+          "value": 612,
+          "sourceId": "reference:lilt:participation:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T08:00:00.000Z",
+          "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "184c63720e8757a92ed25f3b37d8a19b954bb7239b69670b10ea313f62212dcc",
+        "digest": "e3cf330a5210059b059a0d563aecd194c008a7b3f36429818450818896b2a4a1"
+      },
+      {
+        "seq": 9,
+        "id": "e00009",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T08:00:00.000Z",
+        "body": {
+          "claimId": "concentration",
+          "value": 0.42,
+          "sourceId": "reference:lilt:concentration:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T08:00:00.000Z",
+          "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "e3cf330a5210059b059a0d563aecd194c008a7b3f36429818450818896b2a4a1",
+        "digest": "c567d05dbc382485ba70b78ac21b678eb39db6056ac00d1e720816f31e13db3e"
+      },
+      {
+        "seq": 10,
+        "id": "e00010",
+        "kind": "market",
+        "thesisId": "lilt",
+        "at": "2026-11-01T08:00:00.000Z",
+        "body": {
+          "priceIndex": 100,
+          "sourceId": "reference:lilt:price"
+        },
+        "prev": "c567d05dbc382485ba70b78ac21b678eb39db6056ac00d1e720816f31e13db3e",
+        "digest": "5b6c0356b5166c151f02874fade787f047b7c4109c040bbf98f0c0fe67df30bb"
+      },
+      {
+        "seq": 28,
+        "id": "e00028",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T09:00:00.000Z",
+        "body": {
+          "claimId": "depth",
+          "value": 179,
+          "sourceId": "reference:lilt:depth:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T09:00:00.000Z",
+          "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "9a3077929fbb01b6b4c59367ce8c9fcb81cdff1e2b9453560f401c27a2d22b34",
+        "digest": "751e122103c6ccde79c8582742dbda159fbbed24727520fe03c696e7ad0bf82d"
+      },
+      {
+        "seq": 29,
+        "id": "e00029",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T09:00:00.000Z",
+        "body": {
+          "claimId": "participation",
+          "value": 640,
+          "sourceId": "reference:lilt:participation:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T09:00:00.000Z",
+          "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "751e122103c6ccde79c8582742dbda159fbbed24727520fe03c696e7ad0bf82d",
+        "digest": "4afa2eefb5f136bc9de629cd636a30c19118e7873821872c8dfdfdead3daf652"
+      },
+      {
+        "seq": 30,
+        "id": "e00030",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T09:00:00.000Z",
+        "body": {
+          "claimId": "concentration",
+          "value": 0.41,
+          "sourceId": "reference:lilt:concentration:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T09:00:00.000Z",
+          "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "4afa2eefb5f136bc9de629cd636a30c19118e7873821872c8dfdfdead3daf652",
+        "digest": "7550256c18e49a4de3a90ebdf95e9b008e13f674d477c8e04f71e71b333ad7ce"
+      },
+      {
+        "seq": 31,
+        "id": "e00031",
+        "kind": "market",
+        "thesisId": "lilt",
+        "at": "2026-11-01T09:00:00.000Z",
+        "body": {
+          "priceIndex": 106,
+          "sourceId": "reference:lilt:price"
+        },
+        "prev": "7550256c18e49a4de3a90ebdf95e9b008e13f674d477c8e04f71e71b333ad7ce",
+        "digest": "bc75c774c09d4c64588be850c1381e1df8dc9cab766be1a70836c56df804a52a"
+      },
+      {
+        "seq": 40,
+        "id": "e00040",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T10:00:00.000Z",
+        "body": {
+          "claimId": "depth",
+          "value": 165,
+          "sourceId": "reference:lilt:depth:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T10:00:00.000Z",
+          "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "73925d5f44a0d689c1f56c0ce3a12e6eb80f2cb70bee82a56aed1ae210f97726",
+        "digest": "1d2fa245f73c86e39378c72f9c5a3796c72f77708db59c84e5764bea6142a03d"
+      },
+      {
+        "seq": 41,
+        "id": "e00041",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T10:00:00.000Z",
+        "body": {
+          "claimId": "participation",
+          "value": 670,
+          "sourceId": "reference:lilt:participation:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T10:00:00.000Z",
+          "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "1d2fa245f73c86e39378c72f9c5a3796c72f77708db59c84e5764bea6142a03d",
+        "digest": "1423efa3a6720ca1dc1e20f9edacd501d13a3bcd2e6b321aead8531c624e1a71"
+      },
+      {
+        "seq": 42,
+        "id": "e00042",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T10:00:00.000Z",
+        "body": {
+          "claimId": "concentration",
+          "value": 0.4,
+          "sourceId": "reference:lilt:concentration:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T10:00:00.000Z",
+          "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "1423efa3a6720ca1dc1e20f9edacd501d13a3bcd2e6b321aead8531c624e1a71",
+        "digest": "a5a4f3d6010116eb378399b96ceebc4c88228fea5a759bb5fec7f467fa1145f3"
+      },
+      {
+        "seq": 43,
+        "id": "e00043",
+        "kind": "market",
+        "thesisId": "lilt",
+        "at": "2026-11-01T10:00:00.000Z",
+        "body": {
+          "priceIndex": 109,
+          "sourceId": "reference:lilt:price"
+        },
+        "prev": "a5a4f3d6010116eb378399b96ceebc4c88228fea5a759bb5fec7f467fa1145f3",
+        "digest": "be6e81565522689a945144fd5e74644e0340bb612b8d16fd950168089007e069"
+      },
+      {
+        "seq": 52,
+        "id": "e00052",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T11:00:00.000Z",
+        "body": {
+          "claimId": "depth",
+          "value": 136,
+          "sourceId": "reference:lilt:depth:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T11:00:00.000Z",
+          "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "920a8180b1922eb832c3a6b39c840d78273cfe6b095827494024d8d9c356c672",
+        "digest": "de9c44fb5465963bf7d22bbe9fc8b5e5551a9d86e2fac7381e7b8eca872d8b97"
+      },
+      {
+        "seq": 53,
+        "id": "e00053",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T11:00:00.000Z",
+        "body": {
+          "claimId": "participation",
+          "value": 690,
+          "sourceId": "reference:lilt:participation:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T11:00:00.000Z",
+          "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "de9c44fb5465963bf7d22bbe9fc8b5e5551a9d86e2fac7381e7b8eca872d8b97",
+        "digest": "2609ae80a8430ea35536e684984ce565b847ba6d2a24c65a5716b184bea39187"
+      },
+      {
+        "seq": 54,
+        "id": "e00054",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T11:00:00.000Z",
+        "body": {
+          "claimId": "concentration",
+          "value": 0.39,
+          "sourceId": "reference:lilt:concentration:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T11:00:00.000Z",
+          "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "2609ae80a8430ea35536e684984ce565b847ba6d2a24c65a5716b184bea39187",
+        "digest": "c607244fadc58b32dacbb4c238283d26be5265f28ec972a0221d3fb6e110bb80"
+      },
+      {
+        "seq": 55,
+        "id": "e00055",
+        "kind": "market",
+        "thesisId": "lilt",
+        "at": "2026-11-01T11:00:00.000Z",
+        "body": {
+          "priceIndex": 115,
+          "sourceId": "reference:lilt:price"
+        },
+        "prev": "c607244fadc58b32dacbb4c238283d26be5265f28ec972a0221d3fb6e110bb80",
+        "digest": "6e0f0150a423f862f7daebe2986c4429b43b6ebae5d68a0e5bf47780854210ba"
+      },
+      {
+        "seq": 66,
+        "id": "e00066",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T12:00:00.000Z",
+        "body": {
+          "claimId": "depth",
+          "value": 124,
+          "sourceId": "reference:lilt:depth:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T12:00:00.000Z",
+          "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "a6209997ed9e15bbdcacc972712289b8ec67b3098da6492d378f6043c7b8bbb7",
+        "digest": "0b37a22150ca5c04ac6b0c2a4a162012964c560dfb177934ef7d59d81d67e5da"
+      },
+      {
+        "seq": 67,
+        "id": "e00067",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T12:00:00.000Z",
+        "body": {
+          "claimId": "participation",
+          "value": 705,
+          "sourceId": "reference:lilt:participation:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T12:00:00.000Z",
+          "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "0b37a22150ca5c04ac6b0c2a4a162012964c560dfb177934ef7d59d81d67e5da",
+        "digest": "b96b75267e3a4adeefd591eebc8a7b51f061441f163bbbe9e2a8496ca825ff54"
+      },
+      {
+        "seq": 68,
+        "id": "e00068",
+        "kind": "evidence",
+        "thesisId": "lilt",
+        "at": "2026-11-01T12:00:00.000Z",
+        "body": {
+          "claimId": "concentration",
+          "value": 0.39,
+          "sourceId": "reference:lilt:concentration:A",
+          "origin": "example",
+          "observedAt": "2026-11-01T12:00:00.000Z",
+          "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+        },
+        "prev": "b96b75267e3a4adeefd591eebc8a7b51f061441f163bbbe9e2a8496ca825ff54",
+        "digest": "a2415951322ce73c44f8a1e409731e399bfbce8d218e9aef850eadb48c53d12c"
+      },
+      {
+        "seq": 69,
+        "id": "e00069",
+        "kind": "market",
+        "thesisId": "lilt",
+        "at": "2026-11-01T12:00:00.000Z",
+        "body": {
+          "priceIndex": 113,
+          "sourceId": "reference:lilt:price"
+        },
+        "prev": "a2415951322ce73c44f8a1e409731e399bfbce8d218e9aef850eadb48c53d12c",
+        "digest": "56bb317c4b8422478bb338f6c305dd3ee8dd7c77d0bda21695e6d41d33b2f8c3"
+      },
+      {
+        "seq": 80,
+        "id": "e00080",
+        "kind": "review",
+        "thesisId": "lilt",
+        "at": "2026-11-01T12:00:00.000Z",
+        "body": {
+          "note": "The price index is above entry while the depth floor is broken. Preserve the original reason and review the failed condition."
+        },
+        "prev": "59a3c6ce824a7b34a131a41b037ad0be7fdfd462145ecbdc548d37d9945802c5",
+        "digest": "132adbe38b906e54c4499d68a075ccc378d64173e3f1439ca2101e0c0e5534ef"
+      }
+    ],
+    "journalHead": "132adbe38b906e54c4499d68a075ccc378d64173e3f1439ca2101e0c0e5534ef",
+    "caseHead": "132adbe38b906e54c4499d68a075ccc378d64173e3f1439ca2101e0c0e5534ef",
+    "operator": {
+      "product": "Grok Bot",
+      "instructions": "GROKBOT-OPERATOR.md",
+      "transport": "user-managed file handoff",
+      "state": "prepared"
+    },
+    "execution": {
+      "wallet": "not connected",
+      "marketFeed": "not connected",
+      "orders": "none"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {makePacket,makeReceipt,noteFor} from './packet.mjs';
+import {sha256} from './hash.mjs';
+const j=JSON.parse(await readFile(new URL('reference-journal.json',import.meta.url),'utf8')),clock='2026-11-01T12:00:00.000Z';
+test('every condition source ID resolves inside its review packet',async()=>{const p=await makePacket(j,'lilt',clock),ids=new Set(p.sourceEvents.map(e=>e.id));for(const c of p.conditions)for(const id of c.sourceEventIds)assert.ok(ids.has(id));});
+test('a prepared handoff does not invent a provider or wallet connection',async()=>{const p=await makePacket(j,'lilt',clock);assert.equal(p.operator.state,'prepared');assert.equal(p.execution.wallet,'not connected');assert.equal(p.execution.orders,'none');});
+test('the committed receipt matches the exact current packet',async()=>{const expected=JSON.parse(await readFile(new URL('reference-receipt.json',import.meta.url),'utf8')),actual=await makeReceipt(j,'lilt',clock);assert.deepEqual(actual,expected);assert.equal(actual.digest,await sha256(actual.packet));});
+test('a human-readable note retains origin and observed failures',async()=>{const note=noteFor(await makePacket(j,'lilt',clock));assert.match(note,/Origin: example/);assert.match(note,/broken/);assert.match(note,/e\d{5}/);});

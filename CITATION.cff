@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the software version, source origin and review cutoff when using a Pohko result."
+title: "Pohko: keep the reason"
+type: software
+version: 0.1.0
+date-released: 2026-11-01
+authors:
+  - name: Pohko contributors
+license: MIT
+abstract: "An owner-controlled journal for Solana position reasoning, declared conditions, attributed observations and source-linked research handoffs."

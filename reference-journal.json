@@ -1,0 +1,1531 @@
+{
+  "schema": "pohko/journal/1",
+  "name": "The November folio",
+  "origin": "example",
+  "entries": [
+    {
+      "seq": 1,
+      "id": "e00001",
+      "kind": "open",
+      "thesisId": "lilt",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "symbol": "LILT",
+        "title": "Attention needs a floor",
+        "reason": "The community is reaching more accounts while enough SOL remains in the quoted pool. I want depth and distribution to hold as attention grows.",
+        "sizeSOL": 6,
+        "claims": [
+          {
+            "id": "depth",
+            "label": "Depth survives the attention cycle",
+            "metric": "quoteReserveSOL",
+            "op": ">=",
+            "threshold": 140,
+            "unit": "SOL",
+            "weight": 3,
+            "critical": true,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "participation",
+            "label": "Participation continues to broaden",
+            "metric": "activeAccountCount",
+            "op": ">=",
+            "threshold": 600,
+            "unit": "accounts",
+            "weight": 2,
+            "critical": false,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "concentration",
+            "label": "The supplied cohort stays distributed",
+            "metric": "topTenCohortShare",
+            "op": "<=",
+            "threshold": 0.46,
+            "unit": "fraction",
+            "weight": 2,
+            "critical": true,
+            "maxAgeHours": 2
+          }
+        ]
+      },
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+      "digest": "3556462a39b59b33aecc9cd252c884c0898285b42a6b624b16c156289f450110"
+    },
+    {
+      "seq": 2,
+      "id": "e00002",
+      "kind": "open",
+      "thesisId": "mallow",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "symbol": "MALLOW",
+        "title": "Quiet participation",
+        "reason": "A slower community is attracting repeat participation. The position depends on maintained depth, sufficient activity and a bounded cohort share.",
+        "sizeSOL": 4,
+        "claims": [
+          {
+            "id": "depth",
+            "label": "Depth survives the attention cycle",
+            "metric": "quoteReserveSOL",
+            "op": ">=",
+            "threshold": 120,
+            "unit": "SOL",
+            "weight": 3,
+            "critical": true,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "participation",
+            "label": "Participation continues to broaden",
+            "metric": "activeAccountCount",
+            "op": ">=",
+            "threshold": 400,
+            "unit": "accounts",
+            "weight": 2,
+            "critical": false,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "concentration",
+            "label": "The supplied cohort stays distributed",
+            "metric": "topTenCohortShare",
+            "op": "<=",
+            "threshold": 0.5,
+            "unit": "fraction",
+            "weight": 2,
+            "critical": true,
+            "maxAgeHours": 2
+          }
+        ]
+      },
+      "prev": "3556462a39b59b33aecc9cd252c884c0898285b42a6b624b16c156289f450110",
+      "digest": "aa27fe127814aa0d5e7816006612eee43c16d5e5b1f64687afeb29241412724e"
+    },
+    {
+      "seq": 3,
+      "id": "e00003",
+      "kind": "open",
+      "thesisId": "vela",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "symbol": "VELA",
+        "title": "Verify the source disagreement",
+        "reason": "The community has broadened, but reserve observations must agree before the depth condition can be treated as supported.",
+        "sizeSOL": 3,
+        "claims": [
+          {
+            "id": "depth",
+            "label": "Depth survives the attention cycle",
+            "metric": "quoteReserveSOL",
+            "op": ">=",
+            "threshold": 140,
+            "unit": "SOL",
+            "weight": 3,
+            "critical": true,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "participation",
+            "label": "Participation continues to broaden",
+            "metric": "activeAccountCount",
+            "op": ">=",
+            "threshold": 600,
+            "unit": "accounts",
+            "weight": 2,
+            "critical": false,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "concentration",
+            "label": "The supplied cohort stays distributed",
+            "metric": "topTenCohortShare",
+            "op": "<=",
+            "threshold": 0.46,
+            "unit": "fraction",
+            "weight": 2,
+            "critical": true,
+            "maxAgeHours": 2
+          }
+        ]
+      },
+      "prev": "aa27fe127814aa0d5e7816006612eee43c16d5e5b1f64687afeb29241412724e",
+      "digest": "87e95840fe03432ae7f79bdcd3ca9aa7d4f2a2c5cb139895f768034bd7025ebe"
+    },
+    {
+      "seq": 4,
+      "id": "e00004",
+      "kind": "open",
+      "thesisId": "crumb",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "symbol": "CRUMB",
+        "title": "A reason needs current evidence",
+        "reason": "The entry depends on three observations remaining fresh. I will revisit the thesis when the evidence window expires.",
+        "sizeSOL": 2,
+        "claims": [
+          {
+            "id": "depth",
+            "label": "Depth survives the attention cycle",
+            "metric": "quoteReserveSOL",
+            "op": ">=",
+            "threshold": 140,
+            "unit": "SOL",
+            "weight": 3,
+            "critical": true,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "participation",
+            "label": "Participation continues to broaden",
+            "metric": "activeAccountCount",
+            "op": ">=",
+            "threshold": 600,
+            "unit": "accounts",
+            "weight": 2,
+            "critical": false,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "concentration",
+            "label": "The supplied cohort stays distributed",
+            "metric": "topTenCohortShare",
+            "op": "<=",
+            "threshold": 0.46,
+            "unit": "fraction",
+            "weight": 2,
+            "critical": true,
+            "maxAgeHours": 2
+          }
+        ]
+      },
+      "prev": "87e95840fe03432ae7f79bdcd3ca9aa7d4f2a2c5cb139895f768034bd7025ebe",
+      "digest": "19c1c975a06ebd22062e703677e31ec76f91f89c77540e62d414826c16673ce9"
+    },
+    {
+      "seq": 5,
+      "id": "e00005",
+      "kind": "open",
+      "thesisId": "daze",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "symbol": "DAZE",
+        "title": "Distribution before expansion",
+        "reason": "The first reason focused on participation. A later revision must explain why the position remains open under a more specific condition set.",
+        "sizeSOL": 5,
+        "claims": [
+          {
+            "id": "depth",
+            "label": "Depth survives the attention cycle",
+            "metric": "quoteReserveSOL",
+            "op": ">=",
+            "threshold": 140,
+            "unit": "SOL",
+            "weight": 3,
+            "critical": true,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "participation",
+            "label": "Participation continues to broaden",
+            "metric": "activeAccountCount",
+            "op": ">=",
+            "threshold": 600,
+            "unit": "accounts",
+            "weight": 2,
+            "critical": false,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "concentration",
+            "label": "The supplied cohort stays distributed",
+            "metric": "topTenCohortShare",
+            "op": "<=",
+            "threshold": 0.46,
+            "unit": "fraction",
+            "weight": 2,
+            "critical": true,
+            "maxAgeHours": 2
+          }
+        ]
+      },
+      "prev": "19c1c975a06ebd22062e703677e31ec76f91f89c77540e62d414826c16673ce9",
+      "digest": "0a81d50a5d14001a4066833d0f1b951b1b049264f561bc419223bb7ca8ab3ccd"
+    },
+    {
+      "seq": 6,
+      "id": "e00006",
+      "kind": "open",
+      "thesisId": "spindle",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "symbol": "SPINDLE",
+        "title": "A completed research file",
+        "reason": "This position was tracked through a declared review window and then closed by the owner. Its history stays available.",
+        "sizeSOL": 2,
+        "claims": [
+          {
+            "id": "depth",
+            "label": "Depth survives the attention cycle",
+            "metric": "quoteReserveSOL",
+            "op": ">=",
+            "threshold": 140,
+            "unit": "SOL",
+            "weight": 3,
+            "critical": true,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "participation",
+            "label": "Participation continues to broaden",
+            "metric": "activeAccountCount",
+            "op": ">=",
+            "threshold": 600,
+            "unit": "accounts",
+            "weight": 2,
+            "critical": false,
+            "maxAgeHours": 2
+          },
+          {
+            "id": "concentration",
+            "label": "The supplied cohort stays distributed",
+            "metric": "topTenCohortShare",
+            "op": "<=",
+            "threshold": 0.46,
+            "unit": "fraction",
+            "weight": 2,
+            "critical": true,
+            "maxAgeHours": 2
+          }
+        ]
+      },
+      "prev": "0a81d50a5d14001a4066833d0f1b951b1b049264f561bc419223bb7ca8ab3ccd",
+      "digest": "e44009baf247492efb5e70c6055c1ace58ee6c1ad525bb548eb1e149d9fe9726"
+    },
+    {
+      "seq": 7,
+      "id": "e00007",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 184,
+        "sourceId": "reference:lilt:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "e44009baf247492efb5e70c6055c1ace58ee6c1ad525bb548eb1e149d9fe9726",
+      "digest": "184c63720e8757a92ed25f3b37d8a19b954bb7239b69670b10ea313f62212dcc"
+    },
+    {
+      "seq": 8,
+      "id": "e00008",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 612,
+        "sourceId": "reference:lilt:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "184c63720e8757a92ed25f3b37d8a19b954bb7239b69670b10ea313f62212dcc",
+      "digest": "e3cf330a5210059b059a0d563aecd194c008a7b3f36429818450818896b2a4a1"
+    },
+    {
+      "seq": 9,
+      "id": "e00009",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.42,
+        "sourceId": "reference:lilt:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "e3cf330a5210059b059a0d563aecd194c008a7b3f36429818450818896b2a4a1",
+      "digest": "c567d05dbc382485ba70b78ac21b678eb39db6056ac00d1e720816f31e13db3e"
+    },
+    {
+      "seq": 10,
+      "id": "e00010",
+      "kind": "market",
+      "thesisId": "lilt",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "priceIndex": 100,
+        "sourceId": "reference:lilt:price"
+      },
+      "prev": "c567d05dbc382485ba70b78ac21b678eb39db6056ac00d1e720816f31e13db3e",
+      "digest": "5b6c0356b5166c151f02874fade787f047b7c4109c040bbf98f0c0fe67df30bb"
+    },
+    {
+      "seq": 11,
+      "id": "e00011",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 210,
+        "sourceId": "reference:mallow:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "5b6c0356b5166c151f02874fade787f047b7c4109c040bbf98f0c0fe67df30bb",
+      "digest": "3681d5d411d2d7d19b3742ed028f09a3dbc07f9a0ce83a796777cf450691cb68"
+    },
+    {
+      "seq": 12,
+      "id": "e00012",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 620,
+        "sourceId": "reference:mallow:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "3681d5d411d2d7d19b3742ed028f09a3dbc07f9a0ce83a796777cf450691cb68",
+      "digest": "b156621e26279a72c0d00ede205c8f745f0727b095e7dd2c0314b6bc5c857175"
+    },
+    {
+      "seq": 13,
+      "id": "e00013",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.39,
+        "sourceId": "reference:mallow:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "b156621e26279a72c0d00ede205c8f745f0727b095e7dd2c0314b6bc5c857175",
+      "digest": "0acf60872652c11aa76ee7648f491e6e2d89fee64528d419b55a6d6005a6b590"
+    },
+    {
+      "seq": 14,
+      "id": "e00014",
+      "kind": "market",
+      "thesisId": "mallow",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "priceIndex": 100,
+        "sourceId": "reference:mallow:price"
+      },
+      "prev": "0acf60872652c11aa76ee7648f491e6e2d89fee64528d419b55a6d6005a6b590",
+      "digest": "cd297f52bcc7a949e37f1e0c16c7e0d5cf0adfe103cd5e7eae5820971a614670"
+    },
+    {
+      "seq": 15,
+      "id": "e00015",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 173,
+        "sourceId": "reference:vela:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "cd297f52bcc7a949e37f1e0c16c7e0d5cf0adfe103cd5e7eae5820971a614670",
+      "digest": "c9bb7e34d1e17d1cdde14745edfe0d578f5275b3b275054ddc1a9b5496a46b68"
+    },
+    {
+      "seq": 16,
+      "id": "e00016",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 625,
+        "sourceId": "reference:vela:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "c9bb7e34d1e17d1cdde14745edfe0d578f5275b3b275054ddc1a9b5496a46b68",
+      "digest": "c6c0d5a6066882df28d3d8cac2c42f7b79843da267ba96937fb54c80e292baee"
+    },
+    {
+      "seq": 17,
+      "id": "e00017",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.43,
+        "sourceId": "reference:vela:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Authored reference observation 1. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "c6c0d5a6066882df28d3d8cac2c42f7b79843da267ba96937fb54c80e292baee",
+      "digest": "f5bd34a55e7a3b08eae0430e0d06609025b4fafe5bfd53438127afdba85feab4"
+    },
+    {
+      "seq": 18,
+      "id": "e00018",
+      "kind": "market",
+      "thesisId": "vela",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "priceIndex": 100,
+        "sourceId": "reference:vela:price"
+      },
+      "prev": "f5bd34a55e7a3b08eae0430e0d06609025b4fafe5bfd53438127afdba85feab4",
+      "digest": "9276823e386fa58d31b4d4d1bcc400c0004332d90158a580c2a0c1125645ccc4"
+    },
+    {
+      "seq": 19,
+      "id": "e00019",
+      "kind": "evidence",
+      "thesisId": "crumb",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 178,
+        "sourceId": "reference:crumb:depth",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "9276823e386fa58d31b4d4d1bcc400c0004332d90158a580c2a0c1125645ccc4",
+      "digest": "8bd8cd40f2a3aa6d2c87fb5ce4598695655d9092e1275700b5804b4d91a30062"
+    },
+    {
+      "seq": 20,
+      "id": "e00020",
+      "kind": "evidence",
+      "thesisId": "crumb",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 632,
+        "sourceId": "reference:crumb:participation",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "8bd8cd40f2a3aa6d2c87fb5ce4598695655d9092e1275700b5804b4d91a30062",
+      "digest": "99289663df3670ac48b2aade9fa540f533b19a9ed3648b56e84db3af3e59606d"
+    },
+    {
+      "seq": 21,
+      "id": "e00021",
+      "kind": "evidence",
+      "thesisId": "crumb",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.4,
+        "sourceId": "reference:crumb:concentration",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "99289663df3670ac48b2aade9fa540f533b19a9ed3648b56e84db3af3e59606d",
+      "digest": "534462f4dae1d2dd3ee1fbf5dc1ad07cf9b6a73d20e003ee1bcd3754590f1494"
+    },
+    {
+      "seq": 22,
+      "id": "e00022",
+      "kind": "evidence",
+      "thesisId": "daze",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 178,
+        "sourceId": "reference:daze:depth",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "534462f4dae1d2dd3ee1fbf5dc1ad07cf9b6a73d20e003ee1bcd3754590f1494",
+      "digest": "f42262ec088cb76cab2ef194a2dd7be01bd159ece49b85794431909a72d3c1eb"
+    },
+    {
+      "seq": 23,
+      "id": "e00023",
+      "kind": "evidence",
+      "thesisId": "daze",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 632,
+        "sourceId": "reference:daze:participation",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "f42262ec088cb76cab2ef194a2dd7be01bd159ece49b85794431909a72d3c1eb",
+      "digest": "0b26f91d48f443fd5f930c3abd4f8f6d8e23a5f8be488f68db4c68aa48909aa8"
+    },
+    {
+      "seq": 24,
+      "id": "e00024",
+      "kind": "evidence",
+      "thesisId": "daze",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.4,
+        "sourceId": "reference:daze:concentration",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "0b26f91d48f443fd5f930c3abd4f8f6d8e23a5f8be488f68db4c68aa48909aa8",
+      "digest": "0da50011a3c83a222643f2fc10ce898cb18273510edece605d3cbb9d8ab77b19"
+    },
+    {
+      "seq": 25,
+      "id": "e00025",
+      "kind": "evidence",
+      "thesisId": "spindle",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 178,
+        "sourceId": "reference:spindle:depth",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "0da50011a3c83a222643f2fc10ce898cb18273510edece605d3cbb9d8ab77b19",
+      "digest": "e11371f188e2e33e09b9eb9af881aaeea018dacc9cc421e1e06a7874c7989aa4"
+    },
+    {
+      "seq": 26,
+      "id": "e00026",
+      "kind": "evidence",
+      "thesisId": "spindle",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 632,
+        "sourceId": "reference:spindle:participation",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "e11371f188e2e33e09b9eb9af881aaeea018dacc9cc421e1e06a7874c7989aa4",
+      "digest": "2454d1b57c800f0936e59413202ec706a12e57b6d004d0f9ba3a8b84f7566b0e"
+    },
+    {
+      "seq": 27,
+      "id": "e00027",
+      "kind": "evidence",
+      "thesisId": "spindle",
+      "at": "2026-11-01T08:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.4,
+        "sourceId": "reference:spindle:concentration",
+        "origin": "example",
+        "observedAt": "2026-11-01T08:00:00.000Z",
+        "note": "Opening reference observation. No later observation is implied."
+      },
+      "prev": "2454d1b57c800f0936e59413202ec706a12e57b6d004d0f9ba3a8b84f7566b0e",
+      "digest": "9a3077929fbb01b6b4c59367ce8c9fcb81cdff1e2b9453560f401c27a2d22b34"
+    },
+    {
+      "seq": 28,
+      "id": "e00028",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 179,
+        "sourceId": "reference:lilt:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "9a3077929fbb01b6b4c59367ce8c9fcb81cdff1e2b9453560f401c27a2d22b34",
+      "digest": "751e122103c6ccde79c8582742dbda159fbbed24727520fe03c696e7ad0bf82d"
+    },
+    {
+      "seq": 29,
+      "id": "e00029",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 640,
+        "sourceId": "reference:lilt:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "751e122103c6ccde79c8582742dbda159fbbed24727520fe03c696e7ad0bf82d",
+      "digest": "4afa2eefb5f136bc9de629cd636a30c19118e7873821872c8dfdfdead3daf652"
+    },
+    {
+      "seq": 30,
+      "id": "e00030",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.41,
+        "sourceId": "reference:lilt:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "4afa2eefb5f136bc9de629cd636a30c19118e7873821872c8dfdfdead3daf652",
+      "digest": "7550256c18e49a4de3a90ebdf95e9b008e13f674d477c8e04f71e71b333ad7ce"
+    },
+    {
+      "seq": 31,
+      "id": "e00031",
+      "kind": "market",
+      "thesisId": "lilt",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "priceIndex": 106,
+        "sourceId": "reference:lilt:price"
+      },
+      "prev": "7550256c18e49a4de3a90ebdf95e9b008e13f674d477c8e04f71e71b333ad7ce",
+      "digest": "bc75c774c09d4c64588be850c1381e1df8dc9cab766be1a70836c56df804a52a"
+    },
+    {
+      "seq": 32,
+      "id": "e00032",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 214,
+        "sourceId": "reference:mallow:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "bc75c774c09d4c64588be850c1381e1df8dc9cab766be1a70836c56df804a52a",
+      "digest": "bc9f2a4169e18f76bc388d92cbb3b1c03aa1dcd27533d1bccbd358b85b3b955d"
+    },
+    {
+      "seq": 33,
+      "id": "e00033",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 633,
+        "sourceId": "reference:mallow:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "bc9f2a4169e18f76bc388d92cbb3b1c03aa1dcd27533d1bccbd358b85b3b955d",
+      "digest": "6a5523555481d15dc0547a82d56d078af451af0fcdc76bac89c5dc8ce561a057"
+    },
+    {
+      "seq": 34,
+      "id": "e00034",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.38,
+        "sourceId": "reference:mallow:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "6a5523555481d15dc0547a82d56d078af451af0fcdc76bac89c5dc8ce561a057",
+      "digest": "a137e710a9c98c895f9b3697f3c67ec6825a013d3f63d8bbd40cf7ac5a4bdebc"
+    },
+    {
+      "seq": 35,
+      "id": "e00035",
+      "kind": "market",
+      "thesisId": "mallow",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "priceIndex": 101,
+        "sourceId": "reference:mallow:price"
+      },
+      "prev": "a137e710a9c98c895f9b3697f3c67ec6825a013d3f63d8bbd40cf7ac5a4bdebc",
+      "digest": "a8bc31ba2c4c9e1d3a368ee4b302853994c8d4b79eb7881ba4f6b461885e937c"
+    },
+    {
+      "seq": 36,
+      "id": "e00036",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 170,
+        "sourceId": "reference:vela:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "a8bc31ba2c4c9e1d3a368ee4b302853994c8d4b79eb7881ba4f6b461885e937c",
+      "digest": "006e6d32455dae637346c0d2ef245eb267b23cd11f3797ed5cd97f1448324c0d"
+    },
+    {
+      "seq": 37,
+      "id": "e00037",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 642,
+        "sourceId": "reference:vela:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "006e6d32455dae637346c0d2ef245eb267b23cd11f3797ed5cd97f1448324c0d",
+      "digest": "aa779d00f81bea8c60cba9b03bb17743b9f73b9de2b683040e377e3a0e9a6ec6"
+    },
+    {
+      "seq": 38,
+      "id": "e00038",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.42,
+        "sourceId": "reference:vela:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T09:00:00.000Z",
+        "note": "Authored reference observation 2. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "aa779d00f81bea8c60cba9b03bb17743b9f73b9de2b683040e377e3a0e9a6ec6",
+      "digest": "a4b0a1f5f6713fd05bf9fde8988ea9d4ffa8b934a462c170af10aed9fe69a0c3"
+    },
+    {
+      "seq": 39,
+      "id": "e00039",
+      "kind": "market",
+      "thesisId": "vela",
+      "at": "2026-11-01T09:00:00.000Z",
+      "body": {
+        "priceIndex": 103,
+        "sourceId": "reference:vela:price"
+      },
+      "prev": "a4b0a1f5f6713fd05bf9fde8988ea9d4ffa8b934a462c170af10aed9fe69a0c3",
+      "digest": "73925d5f44a0d689c1f56c0ce3a12e6eb80f2cb70bee82a56aed1ae210f97726"
+    },
+    {
+      "seq": 40,
+      "id": "e00040",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 165,
+        "sourceId": "reference:lilt:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "73925d5f44a0d689c1f56c0ce3a12e6eb80f2cb70bee82a56aed1ae210f97726",
+      "digest": "1d2fa245f73c86e39378c72f9c5a3796c72f77708db59c84e5764bea6142a03d"
+    },
+    {
+      "seq": 41,
+      "id": "e00041",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 670,
+        "sourceId": "reference:lilt:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "1d2fa245f73c86e39378c72f9c5a3796c72f77708db59c84e5764bea6142a03d",
+      "digest": "1423efa3a6720ca1dc1e20f9edacd501d13a3bcd2e6b321aead8531c624e1a71"
+    },
+    {
+      "seq": 42,
+      "id": "e00042",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.4,
+        "sourceId": "reference:lilt:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "1423efa3a6720ca1dc1e20f9edacd501d13a3bcd2e6b321aead8531c624e1a71",
+      "digest": "a5a4f3d6010116eb378399b96ceebc4c88228fea5a759bb5fec7f467fa1145f3"
+    },
+    {
+      "seq": 43,
+      "id": "e00043",
+      "kind": "market",
+      "thesisId": "lilt",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "priceIndex": 109,
+        "sourceId": "reference:lilt:price"
+      },
+      "prev": "a5a4f3d6010116eb378399b96ceebc4c88228fea5a759bb5fec7f467fa1145f3",
+      "digest": "be6e81565522689a945144fd5e74644e0340bb612b8d16fd950168089007e069"
+    },
+    {
+      "seq": 44,
+      "id": "e00044",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 222,
+        "sourceId": "reference:mallow:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "be6e81565522689a945144fd5e74644e0340bb612b8d16fd950168089007e069",
+      "digest": "c8c2d12872c88c308f7c42813e3a1b028fdde3ef05e48cb8435030c006ffd668"
+    },
+    {
+      "seq": 45,
+      "id": "e00045",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 640,
+        "sourceId": "reference:mallow:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "c8c2d12872c88c308f7c42813e3a1b028fdde3ef05e48cb8435030c006ffd668",
+      "digest": "3fad554be603d5a9de0ba0943368c9778d265313ee62a6ee0366e9095a04d644"
+    },
+    {
+      "seq": 46,
+      "id": "e00046",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.38,
+        "sourceId": "reference:mallow:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "3fad554be603d5a9de0ba0943368c9778d265313ee62a6ee0366e9095a04d644",
+      "digest": "abc6f329c1db44e34a2936a9d78f3e10ef4033643d534cc4494ee089af0e2ba9"
+    },
+    {
+      "seq": 47,
+      "id": "e00047",
+      "kind": "market",
+      "thesisId": "mallow",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "priceIndex": 99,
+        "sourceId": "reference:mallow:price"
+      },
+      "prev": "abc6f329c1db44e34a2936a9d78f3e10ef4033643d534cc4494ee089af0e2ba9",
+      "digest": "e64123db7308677846b683aa57a7d351e465774db3cb1e63aebff7860516f3c3"
+    },
+    {
+      "seq": 48,
+      "id": "e00048",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 162,
+        "sourceId": "reference:vela:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "e64123db7308677846b683aa57a7d351e465774db3cb1e63aebff7860516f3c3",
+      "digest": "dc07a3dbb4ea9cc05120798549ae46e10cd783081c6da4f8787f16edcd0c4bad"
+    },
+    {
+      "seq": 49,
+      "id": "e00049",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 660,
+        "sourceId": "reference:vela:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "dc07a3dbb4ea9cc05120798549ae46e10cd783081c6da4f8787f16edcd0c4bad",
+      "digest": "48ebc1dcdf8ad8db759622024976dc9949022199bc3257051ef421b215d10d41"
+    },
+    {
+      "seq": 50,
+      "id": "e00050",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.42,
+        "sourceId": "reference:vela:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T10:00:00.000Z",
+        "note": "Authored reference observation 3. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "48ebc1dcdf8ad8db759622024976dc9949022199bc3257051ef421b215d10d41",
+      "digest": "160b88c02691195105c5e7d30e08b7ab45e2d48dd2ba9fe3fec7f753c34afb1e"
+    },
+    {
+      "seq": 51,
+      "id": "e00051",
+      "kind": "market",
+      "thesisId": "vela",
+      "at": "2026-11-01T10:00:00.000Z",
+      "body": {
+        "priceIndex": 105,
+        "sourceId": "reference:vela:price"
+      },
+      "prev": "160b88c02691195105c5e7d30e08b7ab45e2d48dd2ba9fe3fec7f753c34afb1e",
+      "digest": "920a8180b1922eb832c3a6b39c840d78273cfe6b095827494024d8d9c356c672"
+    },
+    {
+      "seq": 52,
+      "id": "e00052",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 136,
+        "sourceId": "reference:lilt:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "920a8180b1922eb832c3a6b39c840d78273cfe6b095827494024d8d9c356c672",
+      "digest": "de9c44fb5465963bf7d22bbe9fc8b5e5551a9d86e2fac7381e7b8eca872d8b97"
+    },
+    {
+      "seq": 53,
+      "id": "e00053",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 690,
+        "sourceId": "reference:lilt:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "de9c44fb5465963bf7d22bbe9fc8b5e5551a9d86e2fac7381e7b8eca872d8b97",
+      "digest": "2609ae80a8430ea35536e684984ce565b847ba6d2a24c65a5716b184bea39187"
+    },
+    {
+      "seq": 54,
+      "id": "e00054",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.39,
+        "sourceId": "reference:lilt:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "2609ae80a8430ea35536e684984ce565b847ba6d2a24c65a5716b184bea39187",
+      "digest": "c607244fadc58b32dacbb4c238283d26be5265f28ec972a0221d3fb6e110bb80"
+    },
+    {
+      "seq": 55,
+      "id": "e00055",
+      "kind": "market",
+      "thesisId": "lilt",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "priceIndex": 115,
+        "sourceId": "reference:lilt:price"
+      },
+      "prev": "c607244fadc58b32dacbb4c238283d26be5265f28ec972a0221d3fb6e110bb80",
+      "digest": "6e0f0150a423f862f7daebe2986c4429b43b6ebae5d68a0e5bf47780854210ba"
+    },
+    {
+      "seq": 56,
+      "id": "e00056",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 226,
+        "sourceId": "reference:mallow:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "6e0f0150a423f862f7daebe2986c4429b43b6ebae5d68a0e5bf47780854210ba",
+      "digest": "6b271bf2ae1ae526db948658517982f87365fe49ce28f1f089a294b1c11d8572"
+    },
+    {
+      "seq": 57,
+      "id": "e00057",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 648,
+        "sourceId": "reference:mallow:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "6b271bf2ae1ae526db948658517982f87365fe49ce28f1f089a294b1c11d8572",
+      "digest": "8954bdb54bb8b70204e29dd7c99d3ccca715159c957bfe8494c44bb16e8a6bb8"
+    },
+    {
+      "seq": 58,
+      "id": "e00058",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.37,
+        "sourceId": "reference:mallow:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "8954bdb54bb8b70204e29dd7c99d3ccca715159c957bfe8494c44bb16e8a6bb8",
+      "digest": "ae84871e4e5d728025dc2f817afbae7561a8a2c172676f75d0337817bd26be8b"
+    },
+    {
+      "seq": 59,
+      "id": "e00059",
+      "kind": "market",
+      "thesisId": "mallow",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "priceIndex": 104,
+        "sourceId": "reference:mallow:price"
+      },
+      "prev": "ae84871e4e5d728025dc2f817afbae7561a8a2c172676f75d0337817bd26be8b",
+      "digest": "50aec609a1415553b1dcffc0bd7a18e8eda2bed1e40912907a4b0bfaa59efcfa"
+    },
+    {
+      "seq": 60,
+      "id": "e00060",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 155,
+        "sourceId": "reference:vela:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "50aec609a1415553b1dcffc0bd7a18e8eda2bed1e40912907a4b0bfaa59efcfa",
+      "digest": "3d2607590cb64974a7eb8020bf5f46c1e6ddf4f94864bd1b871d86b776adde42"
+    },
+    {
+      "seq": 61,
+      "id": "e00061",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 672,
+        "sourceId": "reference:vela:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "3d2607590cb64974a7eb8020bf5f46c1e6ddf4f94864bd1b871d86b776adde42",
+      "digest": "e5b05696a8f55d926cd603549091f20cb0d9165e1d878f8dddc62c83682301a9"
+    },
+    {
+      "seq": 62,
+      "id": "e00062",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.41,
+        "sourceId": "reference:vela:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T11:00:00.000Z",
+        "note": "Authored reference observation 4. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "e5b05696a8f55d926cd603549091f20cb0d9165e1d878f8dddc62c83682301a9",
+      "digest": "16d5e10c353359dafc4ff57dceb483245bb6428a4ca1f830580f71d4276ebc28"
+    },
+    {
+      "seq": 63,
+      "id": "e00063",
+      "kind": "market",
+      "thesisId": "vela",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "priceIndex": 102,
+        "sourceId": "reference:vela:price"
+      },
+      "prev": "16d5e10c353359dafc4ff57dceb483245bb6428a4ca1f830580f71d4276ebc28",
+      "digest": "becdd479e793126001538d0defc3d1ea885b30991cfaec3c42f8279cc74f6f67"
+    },
+    {
+      "seq": 64,
+      "id": "e00064",
+      "kind": "amend",
+      "thesisId": "daze",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "reason": "The earlier participation-led reason was too broad. I am replacing it with an explicit depth floor and fresh evidence requirements.",
+        "thesis": {
+          "symbol": "DAZE",
+          "title": "A narrower reason to stay",
+          "reason": "Maintain the position only while the quote reserve stays above the declared floor, participation is evidenced and the cohort share remains bounded. The revision needs fresh observations.",
+          "sizeSOL": 5,
+          "claims": [
+            {
+              "id": "depth",
+              "label": "Depth survives the attention cycle",
+              "metric": "quoteReserveSOL",
+              "op": ">=",
+              "threshold": 160,
+              "unit": "SOL",
+              "weight": 3,
+              "critical": true,
+              "maxAgeHours": 2
+            },
+            {
+              "id": "participation",
+              "label": "Participation continues to broaden",
+              "metric": "activeAccountCount",
+              "op": ">=",
+              "threshold": 650,
+              "unit": "accounts",
+              "weight": 2,
+              "critical": false,
+              "maxAgeHours": 2
+            },
+            {
+              "id": "concentration",
+              "label": "The supplied cohort stays distributed",
+              "metric": "topTenCohortShare",
+              "op": "<=",
+              "threshold": 0.44,
+              "unit": "fraction",
+              "weight": 2,
+              "critical": true,
+              "maxAgeHours": 2
+            }
+          ]
+        }
+      },
+      "prev": "becdd479e793126001538d0defc3d1ea885b30991cfaec3c42f8279cc74f6f67",
+      "digest": "d85dcb3d445de4d09d4a83cdee57207bec8f466d5839708f394ded892ecaccbe"
+    },
+    {
+      "seq": 65,
+      "id": "e00065",
+      "kind": "close",
+      "thesisId": "spindle",
+      "at": "2026-11-01T11:00:00.000Z",
+      "body": {
+        "note": "Owner closed this research file at the end of its review window. No execution receipt is attached."
+      },
+      "prev": "d85dcb3d445de4d09d4a83cdee57207bec8f466d5839708f394ded892ecaccbe",
+      "digest": "a6209997ed9e15bbdcacc972712289b8ec67b3098da6492d378f6043c7b8bbb7"
+    },
+    {
+      "seq": 66,
+      "id": "e00066",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 124,
+        "sourceId": "reference:lilt:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "a6209997ed9e15bbdcacc972712289b8ec67b3098da6492d378f6043c7b8bbb7",
+      "digest": "0b37a22150ca5c04ac6b0c2a4a162012964c560dfb177934ef7d59d81d67e5da"
+    },
+    {
+      "seq": 67,
+      "id": "e00067",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 705,
+        "sourceId": "reference:lilt:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "0b37a22150ca5c04ac6b0c2a4a162012964c560dfb177934ef7d59d81d67e5da",
+      "digest": "b96b75267e3a4adeefd591eebc8a7b51f061441f163bbbe9e2a8496ca825ff54"
+    },
+    {
+      "seq": 68,
+      "id": "e00068",
+      "kind": "evidence",
+      "thesisId": "lilt",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.39,
+        "sourceId": "reference:lilt:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "b96b75267e3a4adeefd591eebc8a7b51f061441f163bbbe9e2a8496ca825ff54",
+      "digest": "a2415951322ce73c44f8a1e409731e399bfbce8d218e9aef850eadb48c53d12c"
+    },
+    {
+      "seq": 69,
+      "id": "e00069",
+      "kind": "market",
+      "thesisId": "lilt",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "priceIndex": 113,
+        "sourceId": "reference:lilt:price"
+      },
+      "prev": "a2415951322ce73c44f8a1e409731e399bfbce8d218e9aef850eadb48c53d12c",
+      "digest": "56bb317c4b8422478bb338f6c305dd3ee8dd7c77d0bda21695e6d41d33b2f8c3"
+    },
+    {
+      "seq": 70,
+      "id": "e00070",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 229,
+        "sourceId": "reference:mallow:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "56bb317c4b8422478bb338f6c305dd3ee8dd7c77d0bda21695e6d41d33b2f8c3",
+      "digest": "840e8a01e72c014c66f4b9e02e190ad4d37e57ce4820517449a94eb18fcbed0a"
+    },
+    {
+      "seq": 71,
+      "id": "e00071",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 661,
+        "sourceId": "reference:mallow:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "840e8a01e72c014c66f4b9e02e190ad4d37e57ce4820517449a94eb18fcbed0a",
+      "digest": "4272618bb6082acd297fdcdbdf5fc33be9ba7a1973024bd6840d14e0a2881601"
+    },
+    {
+      "seq": 72,
+      "id": "e00072",
+      "kind": "evidence",
+      "thesisId": "mallow",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.37,
+        "sourceId": "reference:mallow:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "4272618bb6082acd297fdcdbdf5fc33be9ba7a1973024bd6840d14e0a2881601",
+      "digest": "9a98b9bfd62202302e34ec325f19b707c16575b9073a626db6cb437a8f6821fd"
+    },
+    {
+      "seq": 73,
+      "id": "e00073",
+      "kind": "market",
+      "thesisId": "mallow",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "priceIndex": 105,
+        "sourceId": "reference:mallow:price"
+      },
+      "prev": "9a98b9bfd62202302e34ec325f19b707c16575b9073a626db6cb437a8f6821fd",
+      "digest": "12e89589b8e10ebf74b7555649371e15ad2ba425f2f135e3ccda01cab9837c52"
+    },
+    {
+      "seq": 74,
+      "id": "e00074",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 148,
+        "sourceId": "reference:vela:depth:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "12e89589b8e10ebf74b7555649371e15ad2ba425f2f135e3ccda01cab9837c52",
+      "digest": "530b4452eccad15bc252775428b5feac33537a41c4cc7a86b1bb977fec1fb5a1"
+    },
+    {
+      "seq": 75,
+      "id": "e00075",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "participation",
+        "value": 691,
+        "sourceId": "reference:vela:participation:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "530b4452eccad15bc252775428b5feac33537a41c4cc7a86b1bb977fec1fb5a1",
+      "digest": "c7cc9485aded4d1f0e954417ebcf46db9232e1f38d8239530bec8718f1fba19a"
+    },
+    {
+      "seq": 76,
+      "id": "e00076",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "concentration",
+        "value": 0.41,
+        "sourceId": "reference:vela:concentration:A",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Authored reference observation 5. Account and cohort counts are supplied measurements, not independent-person counts."
+      },
+      "prev": "c7cc9485aded4d1f0e954417ebcf46db9232e1f38d8239530bec8718f1fba19a",
+      "digest": "4a818676590710003341c2b438e947f19fae11a60bf9a78d43886fc8087fe6c8"
+    },
+    {
+      "seq": 77,
+      "id": "e00077",
+      "kind": "market",
+      "thesisId": "vela",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "priceIndex": 108,
+        "sourceId": "reference:vela:price"
+      },
+      "prev": "4a818676590710003341c2b438e947f19fae11a60bf9a78d43886fc8087fe6c8",
+      "digest": "088f202f10ae4316935bf46c77424d291e5e53831d43f7d03797b5ccb971623c"
+    },
+    {
+      "seq": 78,
+      "id": "e00078",
+      "kind": "evidence",
+      "thesisId": "vela",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 132,
+        "sourceId": "reference:vela:depth:B",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "Second reference source disagrees with A on the same condition."
+      },
+      "prev": "088f202f10ae4316935bf46c77424d291e5e53831d43f7d03797b5ccb971623c",
+      "digest": "e396aecc115b1a76d91809a52c431cf79c3944c75721657033e34f5523a204b7"
+    },
+    {
+      "seq": 79,
+      "id": "e00079",
+      "kind": "evidence",
+      "thesisId": "daze",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "claimId": "depth",
+        "value": 172,
+        "sourceId": "reference:daze:depth",
+        "origin": "example",
+        "observedAt": "2026-11-01T12:00:00.000Z",
+        "note": "The first post-revision reference observation supports depth. Other conditions remain unobserved."
+      },
+      "prev": "e396aecc115b1a76d91809a52c431cf79c3944c75721657033e34f5523a204b7",
+      "digest": "59a3c6ce824a7b34a131a41b037ad0be7fdfd462145ecbdc548d37d9945802c5"
+    },
+    {
+      "seq": 80,
+      "id": "e00080",
+      "kind": "review",
+      "thesisId": "lilt",
+      "at": "2026-11-01T12:00:00.000Z",
+      "body": {
+        "note": "The price index is above entry while the depth floor is broken. Preserve the original reason and review the failed condition."
+      },
+      "prev": "59a3c6ce824a7b34a131a41b037ad0be7fdfd462145ecbdc548d37d9945802c5",
+      "digest": "132adbe38b906e54c4499d68a075ccc378d64173e3f1439ca2101e0c0e5534ef"
+    }
+  ]
+}

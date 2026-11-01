@@ -1,0 +1,10 @@
+import {readFile} from 'node:fs/promises';
+import {verifyJournal} from './journal.mjs';
+import {evaluate} from './evaluate.mjs';
+import {makeReceipt,noteFor,makePacket} from './packet.mjs';
+const [command='list',file='reference-journal.json',id='lilt',clock]=process.argv.slice(2),journal=JSON.parse(await readFile(new URL(file,import.meta.url),'utf8')),check=await verifyJournal(journal,process.env.POHKO_PINNED_HEAD),asOf=clock??journal.entries.at(-1)?.at??new Date().toISOString();
+if(command==='verify')console.log(JSON.stringify(check,null,2));
+else if(command==='receipt')console.log(JSON.stringify(await makeReceipt(journal,id,asOf),null,2));
+else if(command==='note')console.log(noteFor(await makePacket(journal,id,asOf)));
+else if(command==='list')console.table(evaluate(journal,asOf).map(c=>({asset:c.thesis.symbol,state:c.status,version:c.version,SOL:c.thesis.sizeSOL,supported:c.supportedWeight+'/'+c.totalWeight,fresh:c.freshWeight+'/'+c.totalWeight})));
+else throw new Error('Use list, verify, receipt or note');

@@ -1,0 +1,6 @@
+{
+  "name": "pohko", "version": "0.1.0", "private": true, "type": "module",
+  "description": "A memory for Solana positions. Original reasons, explicit conditions, attributed evidence and a Grok Bot research handoff.",
+  "license": "MIT", "engines": {"node": ">=20"},
+  "scripts": {"start": "node serve.mjs", "build": "node build.mjs", "data": "node reference.mjs", "demo": "node cli.mjs", "verify": "node cli.mjs verify reference-journal.json", "test": "node --test", "check": "node check.mjs", "screenshots": "node capture.mjs", "integrity": "node manifest.mjs --verify"}
+}
