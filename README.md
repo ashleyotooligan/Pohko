@@ -1,7 +1,5 @@
 <p align="center"><img src="pohko.png" width="210" alt="Pohko: an original lilac pixel creature with a stepped snout, orange feet and a three-tab tail"></p>
 
-(support Pohko on Pumpfun: 4JvkFc6sdU224MEtzJrxisVd3wPcmAU2N4cP9QJnpump)
-
 # Pohko
 
 ### Keep the reason.
